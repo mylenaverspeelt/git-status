@@ -10,7 +10,6 @@ function App() {
       <Layout>
         <Profile />
         <Repositories />
-        <div>Starreds</div>
       </Layout>
     </main>
   );

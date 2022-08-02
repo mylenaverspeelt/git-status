@@ -26,7 +26,7 @@ function Profile(){
           <span>4</span>
         </div>
         <div>
-          <h4>Starreds</h4>
+          <h4>Starred</h4>
           <span>4</span>
         </div>
         </S.WrapperStatusCount>
