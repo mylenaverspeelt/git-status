@@ -1,49 +1,52 @@
 import styled from "styled-components";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 
+
 export const WrapperTabs = styled(Tabs)`
-  font-size: 1.2rem;
+  font-size: 16px;
   width: 100%;
-  margin-top: 1.6rem;
+  margin-top: 16px;
 `;
 
 export const WrapperTabList = styled(TabList)`
   list-style-type: none;
-  padding: 0.4rem;
+  padding: 4px;
   display: flex;
   margin: 0;
 `;
 WrapperTabList.tabsRole = "TabList";
 
 export const WrapperTab = styled(Tab)`
-  border-radius: 1.6rem;
+  border-radius: 16px;
   border: 1px solid #ccc;
-  padding: 1.6rem;
+  padding: 16px;
   user-select: none;
   cursor: pointer;
-  z-index: 9999;
-  background-color: #fff;
-  margin: 0.8rem;
-
+  z-index: 99999;
+  background-color: "#fff";
+  margin: 8px;
   &:focus {
     outline: none;
   }
-
   &.is-selected {
-    box-shadow: 5px 3px 5px #ccc;
+    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.2);
   }
 `;
-WrapperTabList.tabsRole = "Tab";
+WrapperTab.tabsRole = "Tab";
 
 export const WrapperTabPanel = styled(TabPanel)`
-  padding: 1.6rem;
-  border: 1px solid #ccc;
-  margin-top: -5px;
+  padding: 16px;
+  border: 1px solid "#ccc";
   display: none;
-
+  margin-top: -5px;
   &.is-selected {
     display: block;
   }
 `;
+WrapperTabPanel.tabsRole = "TabPanel";
 
-WrapperTabList.tabsRole = "TabPanel";
+export const WrapperList = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+`;
