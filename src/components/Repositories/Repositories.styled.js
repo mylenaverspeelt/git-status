@@ -2,29 +2,35 @@ import styled from "styled-components";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 
 
+// wrapper geral de todos os componentes
 export const WrapperTabs = styled(Tabs)`
-  font-size: 16px;
+  font-size: 1rem;
   width: 100%;
-  margin-top: 16px;
+  margin-top: 1rem;
 `;
 
+//opções de tab pro usuário escolher
 export const WrapperTabList = styled(TabList)`
   list-style-type: none;
-  padding: 4px;
+  padding: 0.4rem;
   display: flex;
   margin: 0;
 `;
+
+
+//a expensão pede que atribua um role já que é algo personalizado
 WrapperTabList.tabsRole = "TabList";
 
+//unidade de tab que o usuário clica
 export const WrapperTab = styled(Tab)`
-  border-radius: 16px;
-  border: 1px solid #ccc;
-  padding: 16px;
+  border-radius: 1rem;
+  border: 0.01rem solid #ccc;
+  padding: 1rem;
   user-select: none;
   cursor: pointer;
   z-index: 99999;
   background-color: "#fff";
-  margin: 8px;
+  margin: 0.8rem;
   &:focus {
     outline: none;
   }
@@ -34,11 +40,12 @@ export const WrapperTab = styled(Tab)`
 `;
 WrapperTab.tabsRole = "Tab";
 
+//o que aparece quando o usuário clica na tab
 export const WrapperTabPanel = styled(TabPanel)`
-  padding: 16px;
+  padding: 1rem;
   border: 1px solid "#ccc";
   display: none;
-  margin-top: -5px;
+  margin-top: -0.5rem;
   &.is-selected {
     display: block;
   }
