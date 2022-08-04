@@ -1,4 +1,6 @@
-import React, { createContext, useState } from "react";
+//local onde toda api do github vai ser consumdida
+
+import React, { Children, createContext, useState } from "react";
 
 export const GithubContext = createContext({
   user: {},
@@ -6,11 +8,32 @@ export const GithubContext = createContext({
   starred: [],
 });
 
-const GithubProvider = () => {
+const GithubProvider = ({ children }) => {
+  const [githubState, setGithubState] = useState({
+    user: {
+      login: undefined,
+      name: undefined,
+      publicUrl: undefined,
+      blog: undefined,
+      company: undefined,
+      location: undefined,
+      followers: 0,
+      following: 0,
+      public_gists: 0,
+      public_repos: 0,
+    },
+    repositories: [],
+    starred: [],
+  });
 
-const [githubState, setGithubState] = useState(initialstate)
-
-  return <></>;
+  const contextValue = {
+    githubState,
+  };
+  return (
+    <GithubContext.Provider value={contextValue}>
+      {children}
+    </GithubContext.Provider>
+  );
 };
 
 export default GithubProvider;
