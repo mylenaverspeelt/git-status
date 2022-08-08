@@ -1,10 +1,11 @@
 import React from "react";
-import * as S from "./Layout.styled" 
+import * as S from "./Layout.styled";
+import Header from "../Header/Header";
 
-function Layout({children}) {
+function Layout({ children }) {
   return (
     <S.WrapperLayout>
-      <header>header</header>
+      <Header />
       {children}
     </S.WrapperLayout>
   );

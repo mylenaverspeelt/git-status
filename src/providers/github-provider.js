@@ -13,7 +13,7 @@ const GithubProvider = ({ children }) => {
     user: {
       login: undefined,
       name: undefined,
-      publicUrl: undefined,
+      html_url: undefined,
       blog: undefined,
       company: undefined,
       location: undefined,
