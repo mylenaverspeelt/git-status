@@ -23,11 +23,14 @@ button{
     border-radius: 0.8rem;
     font-weight: bold;
     font-size: 1.1rem;
-    background-color: #EEEEEE;
+    background-color: rgba(49, 130, 206, 0.3);
+
+    
 
     &:hover{
         box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.2);
-        background-color: #ccc;
+        background-color: rgba(49, 130, 206, 1);
+        color: white;
     }
 }
 `;
