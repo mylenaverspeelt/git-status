@@ -4,10 +4,10 @@ export default function RepositoryItem({ name, linkToRepos, fullName }) {
   return (
     <S.Wrapper>
       <S.WrapperTitle>{name}</S.WrapperTitle>
-      <h4>full name:</h4>
-      <a href={linkToRepos} target="_blank" rel="noreferrer">
+      <h4>link:  <a href={linkToRepos} target="_blank" rel="noreferrer">
         {fullName}
-        </a>
+        </a></h4>
+     
     </S.Wrapper>
   );
 }

@@ -17,7 +17,6 @@ export const WrapperTabList = styled(TabList)`
   margin: 0;
 `;
 
-
 //a expensão pede que atribua um role já que é algo personalizado
 WrapperTabList.tabsRole = "TabList";
 
@@ -31,6 +30,7 @@ export const WrapperTab = styled(Tab)`
   z-index: 99999;
   background-color: "#fff";
   margin: 0.8rem;
+  
   &:focus {
     outline: none;
   }
@@ -52,6 +52,8 @@ export const WrapperTabPanel = styled(TabPanel)`
 `;
 WrapperTabPanel.tabsRole = "TabPanel";
 
+
+//lista de repositorios que vão ser renderizados
 export const WrapperList = styled.div`
   display: flex;
   justify-content: flex-start;

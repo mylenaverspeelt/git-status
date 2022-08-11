@@ -8,17 +8,13 @@ export default function Repositories() {
   const [hasUserForSearchRepos, sethasUserForSearchRepos] = useState(false);
 
   useEffect(() => {
-    if (!!githubState.user.login) {
+    if (githubState.user.login) {
       getUserRepos(githubState.user.login);
       getUserStarred(githubState.user.login);
     }
-    sethasUserForSearchRepos(!!githubState.repositories);
+    sethasUserForSearchRepos(githubState.repositories);
   }, [
-    githubState.user.login,
-    getUserRepos,
-    getUserStarred,
-    githubState.repositories,
-  ]);
+    githubState.user.login]);
 
   return (
     <>
@@ -38,8 +34,8 @@ export default function Repositories() {
                 <RepositoryItem
                   key={item.id}
                   name={item.name}
-                  linkToRepos={item.linkToRepos}
-                  fullName={item.fullName}
+                  linkToRepos={item.full_name}
+                  fullName={item.full_name}
                 />
               ))}
             </S.WrapperList>
@@ -51,8 +47,8 @@ export default function Repositories() {
                 <RepositoryItem
                   key={item.id}
                   name={item.name}
-                  linkToRepos={item.linkToRepos}
-                  fullName={item.fullName}
+                  linkToRepos={item.html_url}
+                  fullName={item.full_name}
                 />
               ))}
             </S.WrapperList>
