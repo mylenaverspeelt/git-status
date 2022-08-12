@@ -2,7 +2,7 @@
 
 Application made with React, using the github public api to render users main infos.
 
-<img src="./public/images/read-me-img.png"/>
+<img src="./public/read-me-img.png"/>
 
 ### Features
 
